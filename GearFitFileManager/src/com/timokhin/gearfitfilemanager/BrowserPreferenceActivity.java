@@ -1,5 +1,7 @@
 package com.timokhin.gearfitfilemanager;
 
+import com.timokhin.gearfitfilemanager.utils.Debug;
+
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -13,12 +15,14 @@ import android.preference.PreferenceActivity;
 
 public class BrowserPreferenceActivity extends PreferenceActivity {
 	
-	private DialogDisplayPreference pref = new DialogDisplayPreference(BrowserPreferenceActivity.this);
+	private DialogDisplayPreference pref;
 	@SuppressWarnings("deprecation")
 	protected void onCreate(Bundle savedUnstanceState) {
 		super.onCreate(savedUnstanceState);
+		Debug.out("DialogDisplayPreference");
 		addPreferencesFromResource(R.xml.activity_browser_preference);
-
+		pref = new DialogDisplayPreference(BrowserPreferenceActivity.this);
+		
 		Preference textSizePref = (Preference)findPreference("textSize");
 		textSizePref.setDefaultValue(pref.getTextSize());
 		textSizePref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {			
