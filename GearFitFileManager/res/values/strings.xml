@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Gear Fit File Manager</string>
+    <string name="hello_world">Gear Fit File Manager Main Activity</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

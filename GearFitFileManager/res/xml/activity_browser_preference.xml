@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BrowserPreferenceActivity" >
+
+     <PreferenceCategory
+   		android:summary="Test Size Preference"
+   		android:title="Test Size Preference" >
+  		<ListPreference
+    		android:key="textSize"
+    		android:summary="Size of text in file viewer"
+    		android:title="Text Size" 
+    		android:entries="@array/sizes"
+    		android:entryValues="@array/intSizes"
+    		android:defaultValue="Medium"/>
+  		<ListPreference
+    		android:key="browserTextSize"
+    		android:summary="Size of filenames and description"
+    		android:title="Size of filenames and description" 
+    		android:entries="@array/sizes"
+    		android:entryValues="@array/intSizes"
+    		android:defaultValue="Small" />
+ 	</PreferenceCategory>
+
+</PreferenceScreen>
